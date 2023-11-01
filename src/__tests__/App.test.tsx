@@ -40,4 +40,14 @@ describe('State changes', () => {
     userEvent.dblClick(button);
     expect(unit.textContent).toBe('F');
   });
+
+  it('properly toggles temperature values from F to C and vice-versa', () => {
+    render(<App />);
+    const tempHolder = screen.getByText(/90/);
+    const button = screen.getByText(/Toggle Temperature/);
+    userEvent.click(button);
+    expect(tempHolder.textContent).toBe('32°C');
+    userEvent.click(button);
+    expect(tempHolder.textContent).toBe('89°F');
+  });
 });

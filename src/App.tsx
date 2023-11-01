@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import TextButton from './components/TextButton';
 import fahrenheitToCelsius from './helpers/fahrenheitToCelsius';
+import celsiusToFahrenheit from './helpers/celsiusToFahrenheit';
 
 function App() {
   const [temp, setTemp] = useState(90);
@@ -13,6 +14,7 @@ function App() {
       setTemp(fahrenheitToCelsius(temp));
     } else {
       setUnit('F');
+      setTemp(celsiusToFahrenheit(temp));
     }
   };
 

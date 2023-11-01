@@ -1,7 +1,6 @@
 type PropTypes = {
   children: string;
   handleClick: () => void;
-  // temperature: number;
 };
 
 const TextButton = ({ children, handleClick }: PropTypes) => {

@@ -1,6 +1,6 @@
 import fahrenheitToCelsius from './fahrenheitToCelsius';
 
-describe('Temperature conversion function', () => {
+describe('Fahrenheit to celsius conversion', () => {
   it('Does the math correctly', () => {
     expect(fahrenheitToCelsius(90)).toBeCloseTo(32);
   });
