@@ -1,10 +1,11 @@
 type PropTypes = {
   children: string;
-  handleClick: (x: number) => number;
+  handleClick: () => void;
+  // temperature: number;
 };
 
 const TextButton = ({ children, handleClick }: PropTypes) => {
-  return <button onClick={() => handleClick(3)}>{children}</button>;
+  return <button onClick={() => handleClick()}>{children}</button>;
 };
 
 export default TextButton;
