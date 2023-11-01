@@ -5,6 +5,6 @@ import App from '../App';
 
 it('renders the correct title text', () => {
   render(<App />); // Arrange
-  const linkElement = screen.getByText(/Fahrenheit to Celsius/i); // Act
+  const linkElement = screen.getByText(/Temperature converter/i); // Act
   expect(linkElement).toBeInTheDocument(); // Assert
 });
