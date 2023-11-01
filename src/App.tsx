@@ -1,6 +1,6 @@
 import './App.css';
-import ConvertButton from './components/TextButton';
-import tempConversion from './helpers/tempConversion';
+import TextButton from './components/TextButton';
+import fahrenheitToCelsius from './helpers/fahrenheitToCelsius';
 
 function App() {
   return (
@@ -13,8 +13,12 @@ function App() {
 
         <p>Temperature converter</p>
         <div style={{ display: 'flex', gap: '10px' }}>
-          <ConvertButton>Convert to Celsius</ConvertButton>
-          <ConvertButton>Convert to Fahrenheit</ConvertButton>
+          <TextButton handleClick={fahrenheitToCelsius}>
+            Convert to Celsius
+          </TextButton>
+          <TextButton handleClick={fahrenheitToCelsius}>
+            Convert to Fahrenheit
+          </TextButton>
         </div>
       </header>
     </div>

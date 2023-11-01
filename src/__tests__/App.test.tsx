@@ -3,8 +3,10 @@ import App from '../App';
 
 // Put your integration tests here
 
-it('renders the correct title text', () => {
-  render(<App />); // Arrange
-  const linkElement = screen.getByText(/Temperature converter/i); // Act
-  expect(linkElement).toBeInTheDocument(); // Assert
+describe('Initial text', () => {
+  it('renders the correct title text', () => {
+    render(<App />); // Arrange
+    const linkElement = screen.getByText(/Temperature converter/i); // Act
+    expect(linkElement).toBeInTheDocument(); // Assert
+  });
 });

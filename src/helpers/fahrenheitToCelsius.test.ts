@@ -1,4 +1,4 @@
-import fahrenheitToCelsius from './tempConversion';
+import fahrenheitToCelsius from './fahrenheitToCelsius';
 
 describe('Temperature conversion function', () => {
   it('Does the math correctly', () => {
