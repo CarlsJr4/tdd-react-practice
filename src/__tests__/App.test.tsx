@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import App from '../App';
 import userEvent from '@testing-library/user-event';
 
@@ -49,5 +49,15 @@ describe('State changes', () => {
     expect(tempHolder.textContent).toBe('32°C');
     userEvent.click(button);
     expect(tempHolder.textContent).toBe('89°F');
+  });
+});
+
+describe('API requests', () => {
+  it('properly renders posts', async () => {
+    render(<App />);
+    const post = await screen.findByText(
+      /sunt aut facere repellat provident occaecati excepturi optio reprehenderit/
+    );
+    expect(post).toBeInTheDocument();
   });
 });
