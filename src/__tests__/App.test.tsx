@@ -25,11 +25,11 @@ describe('Initial text', () => {
 });
 
 describe('State changes', () => {
-  it('properly toggles display units from F to C', () => {
+  it('properly toggles display units from F to C', async () => {
     render(<App />);
     const unit = screen.getByTestId('tempUnit');
     const button = screen.getByText(/Toggle Temperature/);
-    userEvent.click(button);
+    await userEvent.click(button);
     expect(unit.textContent).toBe('C');
   });
 
@@ -41,13 +41,13 @@ describe('State changes', () => {
     expect(unit.textContent).toBe('F');
   });
 
-  it('properly toggles temperature values from F to C and vice-versa', () => {
+  it('properly toggles temperature values from F to C and vice-versa', async () => {
     render(<App />);
     const tempHolder = screen.getByText(/90/);
     const button = screen.getByText(/Toggle Temperature/);
-    userEvent.click(button);
+    await userEvent.click(button);
     expect(tempHolder.textContent).toBe('32°C');
-    userEvent.click(button);
+    await userEvent.click(button);
     expect(tempHolder.textContent).toBe('89°F');
   });
 });
